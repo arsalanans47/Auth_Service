@@ -32,7 +32,7 @@ const signIn = async (req, res) => {
       message: "successfully signed in",
       data: response,
       success: true,
-      err: {}
+      err: {} 
     });
   } catch (error) {
     console.log("Something went wrong in sign in controller");
