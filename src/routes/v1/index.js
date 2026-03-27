@@ -18,5 +18,17 @@ router.post(
   UserController.signIn
 );
 
+router.get(
+  '/isAuthenticated',
+  UserController.isAuthenticated
+)
+
+
+// router.get('/test', (req, res) => {
+//   return res.status(200).json({
+//     message: "ok"
+//   })
+// })
+
 module.exports = router;
 
