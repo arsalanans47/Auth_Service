@@ -6,6 +6,8 @@ const apiRoutes = require('./routes/index');
 
 // const UserService = require('./services/user-service');
 
+const db = require('./models/index');
+
 const app = express();
 
 const prepareAndStartServer = () => {
@@ -18,7 +20,11 @@ const prepareAndStartServer = () => {
 
   app.listen(PORT, async () => {
     console.log(`Server is running on port : ${PORT}`);
-    
+
+    if(process.env.DB_SYNC) {
+      db.sequelize.sync({ alter: true});;
+    }
+
     // const service = new UserService();
 
 
