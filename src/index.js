@@ -6,7 +6,7 @@ const apiRoutes = require('./routes/index');
 
 // const UserService = require('./services/user-service');
 
-const db = require('./models/index');
+const db = require('./models/index'); 
 
 const app = express();
 
